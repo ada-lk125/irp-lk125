@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "blind-pack-manifest-v1",
+  "labellingSchemaVersion": "blind-labelling-v1",
+  "packVersion": "blind-sample-2026-06-30",
+  "purpose": "sample",
+  "createdAt": "2026-06-30T00:00:00.000Z",
+  "fileName": "blind-labelling-pack.sample.csv",
+  "sha256": "e8755697e6c32f0870066c0c2cf3352545dc620749a40506adca94830c05e083",
+  "rowCount": 4,
+  "queryCount": 1,
+  "columnCount": 36
+}

@@ -1,0 +1,15 @@
+{
+  "name": "irp-lk125-submission",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent entry points for the ClimateTech matching IRP.",
+  "scripts": {
+    "setup": "npm ci --prefix reference/undaunted-progress",
+    "start": "npm start --prefix reference/undaunted-progress",
+    "dev": "npm run dev --prefix reference/undaunted-progress",
+    "test": "npm test --prefix reference/undaunted-progress",
+    "check:standalone": "npm run demo:check --prefix reference/undaunted-progress",
+    "check:submission": "node scripts/check-final-submission.mjs",
+    "check": "npm run irp:check-final-project-readiness --prefix reference/undaunted-progress"
+  }
+}

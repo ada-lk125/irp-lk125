@@ -1,0 +1,90 @@
+{
+  "run": {
+    "schemaVersion": "baseline-export-v1",
+    "runId": "sample-local-run",
+    "createdAt": "2026-06-24T00:00:00.000Z",
+    "source": "docs/irp/samples/baseline-export-input.sample.json",
+    "aiCandidateCount": 5,
+    "aiModel": "gpt-4o-mini",
+    "weights": {
+      "stage": 0.2,
+      "ticketSize": 0.2,
+      "sectorOverlap": 0.2,
+      "geography": 0.15,
+      "instruments": 0.1,
+      "semantic": 0.15
+    },
+    "dryRun": false
+  },
+  "input": {
+    "fundingRound": {
+      "id": "sample-local-run",
+      "startupId": "sample-local-run",
+      "startupName": "Sample Climate Startup",
+      "roundStage": "Seed",
+      "amountRaising": 1200000,
+      "minTicketSize": 100000,
+      "investmentTypes": ["Equity"],
+      "roundGeography": "United Kingdom",
+      "roundSectors": ["Energy", "Climate Software"],
+      "tweetPitch": "A sample pitch for local export shape checks.",
+      "tractionSummary": "An anonymised traction summary.",
+      "unfairAdvantage": "An anonymised technical advantage.",
+      "preferredInvestorTypes": ["VC"]
+    },
+    "startup": {
+      "id": "sample-local-run",
+      "name": "Sample Climate Startup",
+      "description": "An anonymised startup profile used only for export shape testing.",
+      "climateProblem": "Industrial energy waste",
+      "solutionDescription": "Software-assisted efficiency monitoring",
+      "businessModel": "SaaS",
+      "targetMarket": "Industrial operators",
+      "competitors": "General monitoring tools"
+    }
+  },
+  "progress": [
+    {
+      "phase": "complete",
+      "current": 1,
+      "total": 1,
+      "message": "Sample export completed"
+    }
+  ],
+  "matches": [
+    {
+      "rank": 1,
+      "investor": {
+        "id": "sample-investor-1",
+        "organisation": "Sample Climate Fund",
+        "investorType": ["VC"],
+        "investmentStage": ["Seed"],
+        "sectorFocus": ["Energy"],
+        "subSectors": ["Climate Software"],
+        "regionalFocus": ["United Kingdom"],
+        "minTicketSize": 100000,
+        "maxTicketSize": 1500000,
+        "investmentInstruments": ["Equity"]
+      },
+      "scores": {
+        "stageMatch": 100,
+        "ticketSizeMatch": 90,
+        "sectorOverlap": 100,
+        "geographyMatch": 100,
+        "instrumentMatch": 100,
+        "semanticScore": 82,
+        "totalScore": 95
+      },
+      "matchReasons": [
+        "Stage alignment: Seed",
+        "Ticket size overlap",
+        "Sector match: energy"
+      ],
+      "ai": {
+        "scored": true,
+        "hardExcluded": false,
+        "insight": "Sample semantic note for shape testing only."
+      }
+    }
+  ]
+}

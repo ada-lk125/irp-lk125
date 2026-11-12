@@ -1,0 +1,22 @@
+{
+  "queryId": "query-sample-startup-series-a-2027",
+  "startupId": "startup-sample-001",
+  "fundingRoundId": "round-sample-series-a-002",
+  "startupName": "Sample Climate Startup",
+  "description": "A fictional company building software for industrial heat pump planning.",
+  "climateProblem": "Industrial sites waste energy because heat demand and equipment options are hard to compare.",
+  "solutionDescription": "The product models site-level heat demand and recommends lower-carbon retrofit options.",
+  "businessModel": "Annual software licence for industrial operators and engineering consultancies.",
+  "targetMarket": "UK and European manufacturers with high process heat demand.",
+  "competitors": "Internal spreadsheets, engineering consultancy reports and generic energy modelling tools.",
+  "roundStage": "Series A",
+  "amountRaising": 4500000,
+  "minTicketSize": 250000,
+  "investmentTypes": ["Equity"],
+  "roundGeography": "United Kingdom",
+  "roundSectors": ["Clean Energy", "Built Environment"],
+  "tweetPitch": "Planning software for industrial heat pump retrofits.",
+  "tractionSummary": "Twelve paid sites now use the product, including three multi-site industrial groups.",
+  "unfairAdvantage": "The team combines heat system modelling, site delivery experience and operating data from paid deployments.",
+  "preferredInvestorTypes": ["VC", "Impact Fund"]
+}

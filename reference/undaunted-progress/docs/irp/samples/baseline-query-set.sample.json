@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "baseline-query-set-v1",
+  "inputs": [
+    "baseline-export-input.sample.json",
+    "baseline-export-input-series-a.sample.json"
+  ]
+}

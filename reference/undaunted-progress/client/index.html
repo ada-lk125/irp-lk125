@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A local, reproducible demonstration of the ClimateTech startup-investor matching algorithm."
+    />
+    <title>Undaunted · Investor Matching IRP</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <nav aria-label="Application identity">
+          <a class="brand" href="/">
+            <span class="brand-mark" aria-hidden="true">U</span>
+            <span>Undaunted · IRP</span>
+          </a>
+          <span class="environment-badge">Local demo · fictional data</span>
+        </nav>
+        <div class="hero-copy">
+          <p class="eyebrow">ClimateTech startup–investor matching</p>
+          <h1>Investor introductions: legacy vs normalisation v1.</h1>
+          <p>
+            Compare the preserved legacy path with normalisation v1 using the
+            same startup, investors and deterministic text signal.
+          </p>
+        </div>
+      </header>
+
+      <section class="evidence-ledger" aria-labelledby="evidence-title">
+        <div class="evidence-heading">
+          <div>
+            <p class="step">Research evidence</p>
+            <h2 id="evidence-title">What is known today</h2>
+          </div>
+          <span id="evidence-date" class="evidence-date">As of 3 August 2026</span>
+        </div>
+
+        <div class="evidence-grid">
+          <article class="evidence-card">
+            <span>Earlier blind baseline</span>
+            <strong id="baseline-label-count">30</strong>
+            <p>blind judgements across <b id="baseline-query-count">3</b> queries</p>
+          </article>
+          <article class="evidence-card">
+            <span>Baseline macro NDCG@10</span>
+            <strong id="baseline-ndcg">0.8296</strong>
+            <p>P@10 <b id="baseline-precision">0.9333</b></p>
+          </article>
+          <article id="final-gate-card" class="evidence-card pending">
+            <span id="final-gate-label">Final study cases pending</span>
+            <strong><b id="completed-case-count">0</b> / <b id="case-count-range">2–3</b></strong>
+            <p>complete real funding rounds reviewed at Top-10</p>
+          </article>
+          <article class="evidence-card">
+            <span>Qualification passes</span>
+            <strong><b id="completed-reviewer-count">0</b> / <b id="target-reviewer-count">2</b></strong>
+            <p id="reviewer-note">Maiko plus Cathal if available</p>
+          </article>
+          <article class="evidence-card">
+            <span>Final four-case macro P@5</span>
+            <strong><b id="pilot-p5-legacy">—</b> → <b id="pilot-p5-optimised">—</b></strong>
+            <p>normalisation-v1 delta <b id="pilot-p5-delta">—</b></p>
+          </article>
+          <article class="evidence-card">
+            <span>Final four-case macro P@10</span>
+            <strong><b id="pilot-p10-legacy">—</b> → <b id="pilot-p10-optimised">—</b></strong>
+            <p>normalisation-v1 delta <b id="pilot-p10-delta">—</b></p>
+          </article>
+        </div>
+
+        <div class="pilot-ledger">
+          <div>
+            <span class="ledger-label">Earlier pilot overlap diagnostics · <b id="candidate-count">354</b> fixed investors</span>
+            <div id="pilot-overlaps" class="overlap-list"></div>
+          </div>
+          <div id="claim-status" class="claim-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <p id="evidence-claim">
+              Ranking-quality improvement is not yet established.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Matching comparison">
+        <aside class="input-panel">
+          <div class="section-heading">
+            <p class="step">01 · Input</p>
+            <h2>Startup and round</h2>
+            <p>
+              This standalone form covers the current platform fields used by
+              the matcher. The presentation defaults deliberately use common
+              aliases that the legacy matcher reads poorly.
+            </p>
+          </div>
+
+          <form id="matching-form">
+            <label>
+              Startup name
+              <input name="startupName" value="Sample Heat Planning" required />
+            </label>
+
+            <label>
+              Description
+              <textarea name="description" rows="4" required>Software for industrial heat pump planning and lower-carbon retrofits.</textarea>
+            </label>
+
+            <details class="form-section">
+              <summary>Startup matching details</summary>
+              <p>
+                In the shared platform these values come from the selected
+                startup profile. They are editable here because the local demo
+                has no account or database.
+              </p>
+              <div class="field-grid">
+                <label>
+                  Climate problem
+                  <textarea name="climateProblem" rows="3">Industrial heat is difficult to decarbonise and remains dependent on fossil fuels.</textarea>
+                </label>
+                <label>
+                  Solution
+                  <textarea name="solutionDescription" rows="3">Planning software identifies viable heat-pump retrofits and estimates carbon savings.</textarea>
+                </label>
+                <label>
+                  Business model
+                  <textarea name="businessModel" rows="3">B2B software subscription for industrial operators and engineering partners.</textarea>
+                </label>
+                <label>
+                  Target market
+                  <textarea name="targetMarket" rows="3">UK and European industrial sites planning lower-carbon heat upgrades.</textarea>
+                </label>
+                <label>
+                  Competitors
+                  <textarea name="competitors" rows="3">Engineering consultancies and general-purpose energy modelling tools.</textarea>
+                </label>
+              </div>
+            </details>
+
+            <div class="field-grid">
+              <label>
+                Round stage
+                <select name="roundStage">
+                  <option value="pre_seed">pre_seed (alias)</option>
+                  <option value="Pre-seed">Pre-seed</option>
+                  <option value="Seed">Seed</option>
+                  <option value="Series A">Series A</option>
+                </select>
+              </label>
+              <label>
+                Geography
+                <select name="roundGeography">
+                  <option value="UK">UK (alias)</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Europe excl UK">Europe excl UK</option>
+                  <option value="Global">Global</option>
+                </select>
+              </label>
+              <label>
+                Investment type
+                <select name="investmentType">
+                  <option value="Equity (VC)">Equity (VC) (alias)</option>
+                  <option value="Equity">Equity</option>
+                  <option value="SAFE">SAFE</option>
+                  <option value="Convertible Note">Convertible Note</option>
+                  <option value="Grant">Grant</option>
+                  <option value="Revenue Based">Revenue Based</option>
+                </select>
+              </label>
+              <label>
+                Sector
+                <select name="sector">
+                  <option value="Clean Energy">Clean Energy</option>
+                  <option value="Built Environment">Built Environment</option>
+                  <option value="Carbon Economy">Carbon Economy</option>
+                  <option value="Transport">Transport</option>
+                  <option value="Nature">Nature</option>
+                  <option value="Water">Water</option>
+                  <option value="Materials">Materials</option>
+                </select>
+              </label>
+              <label>
+                Amount raising (£)
+                <input
+                  name="amountRaising"
+                  type="number"
+                  min="1"
+                  step="1000"
+                  value="1200000"
+                />
+              </label>
+              <label>
+                Minimum ticket (£)
+                <input
+                  name="minTicketSize"
+                  type="number"
+                  min="1"
+                  step="1000"
+                  value="50000"
+                />
+              </label>
+            </div>
+
+            <details class="form-section" open>
+              <summary>Pitch and investor preferences</summary>
+              <div class="field-grid">
+                <label>
+                  Tweet pitch (max 280 characters)
+                  <textarea name="tweetPitch" rows="3" maxlength="280">Plan industrial heat-pump retrofits faster with evidence-led software for cost, feasibility and carbon savings.</textarea>
+                </label>
+                <label>
+                  Traction summary
+                  <textarea name="tractionSummary" rows="3">Pilot projects with industrial operators and an engineering partner pipeline.</textarea>
+                </label>
+                <label>
+                  Unfair advantage
+                  <textarea name="unfairAdvantage" rows="3">A specialised industrial heat dataset and workflow built around retrofit feasibility.</textarea>
+                </label>
+                <label>
+                  Preferred investor types
+                  <select name="preferredInvestorTypes" multiple size="4">
+                    <option value="VC" selected>VC</option>
+                    <option value="Impact Fund" selected>Impact Fund</option>
+                    <option value="Angel">Angel</option>
+                    <option value="Family Office">Family Office</option>
+                    <option value="Corporate VC">Corporate VC</option>
+                    <option value="Accelerator">Accelerator</option>
+                    <option value="Government / Grant Body">Government / Grant Body</option>
+                    <option value="Fund of Funds">Fund of Funds</option>
+                  </select>
+                  <span class="field-hint">Use Ctrl/Cmd to select more than one.</span>
+                </label>
+              </div>
+            </details>
+
+            <button id="run-button" type="submit">
+              <span>Run comparison</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <p id="form-status" class="form-status" role="status"></p>
+          </form>
+        </aside>
+
+        <div class="explanation-panel">
+          <div class="section-heading">
+            <p class="step">02 · Controlled change</p>
+            <h2>One input, two profiles</h2>
+          </div>
+          <ol class="change-list">
+            <li>
+              <span>Stage</span>
+              <strong id="stage-change">pre_seed → Pre-seed</strong>
+            </li>
+            <li>
+              <span>Geography</span>
+              <strong id="geography-change">UK → United Kingdom</strong>
+            </li>
+            <li>
+              <span>Instrument</span>
+              <strong id="instrument-change">Equity (VC) → Equity</strong>
+            </li>
+          </ol>
+          <div class="method-note">
+            <span class="method-icon" aria-hidden="true">≈</span>
+            <div>
+              <strong>Semantic signal held deterministic</strong>
+              <p>
+                Both profiles use the same local text-similarity method. No API
+                key, private data or production service is required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="results" hidden>
+        <div class="results-header">
+          <div>
+            <p class="step">03 · Demonstration result</p>
+            <h2>Ranking comparison</h2>
+          </div>
+          <p id="result-summary" class="result-summary"></p>
+        </div>
+
+        <div class="comparison-grid">
+          <article>
+            <div class="method-header baseline">
+              <span>Baseline</span>
+              <h3>Legacy labels</h3>
+              <p>Raw values are compared as received.</p>
+            </div>
+            <div id="baseline-results" class="match-list"></div>
+          </article>
+          <article>
+            <div class="method-header optimised">
+              <span>Optimised</span>
+              <h3>Normalisation v1</h3>
+              <p>Known aliases are mapped before rule scoring.</p>
+            </div>
+            <div id="optimised-results" class="match-list"></div>
+          </article>
+        </div>
+
+        <div class="evidence-boundary">
+          <strong>Evidence boundary</strong>
+          <p id="evidence-boundary"></p>
+        </div>
+      </section>
+
+      <footer>
+        <span>Lingxin Kong · MSc IRP · 2026</span>
+        <span>Runs locally from the submitted repository</span>
+      </footer>
+    </main>
+  </body>
+</html>

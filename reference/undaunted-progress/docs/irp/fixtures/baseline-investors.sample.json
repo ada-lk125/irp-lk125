@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sample-investor-energy-seed",
+    "organisation": "Sample Energy Seed Fund",
+    "description": "An anonymised climate investor profile for local baseline export checks.",
+    "investorType": ["VC"],
+    "investmentStage": ["Seed", "Series A"],
+    "sectorFocus": ["Energy", "Climate Software"],
+    "subSectors": ["Industrial Efficiency", "Grid Software"],
+    "regionalFocus": ["United Kingdom", "Europe"],
+    "hqLocation": "London",
+    "investmentThesis": "Backs software that helps industrial companies reduce energy waste.",
+    "minTicketSize": 100000,
+    "maxTicketSize": 1500000,
+    "investmentInstruments": ["Equity"]
+  },
+  {
+    "id": "sample-investor-hardware-later",
+    "organisation": "Sample Hardware Growth Fund",
+    "description": "An anonymised investor profile with a later stage and larger ticket range.",
+    "investorType": ["VC"],
+    "investmentStage": ["Series B", "Growth"],
+    "sectorFocus": ["Hardware", "Manufacturing"],
+    "subSectors": ["Sensors", "Industrial Equipment"],
+    "regionalFocus": ["United States"],
+    "hqLocation": "Boston",
+    "investmentThesis": "Invests in hardware-led companies with manufacturing proof points.",
+    "minTicketSize": 2000000,
+    "maxTicketSize": 8000000,
+    "investmentInstruments": ["Equity"]
+  },
+  {
+    "id": "sample-investor-impact-angel",
+    "organisation": "Sample Climate Angel Network",
+    "description": "An anonymised angel network used to test preferred investor type handling.",
+    "investorType": ["Angel", "Impact"],
+    "investmentStage": ["Pre-seed", "Seed"],
+    "sectorFocus": ["Energy", "Carbon"],
+    "subSectors": ["Measurement", "Industrial Efficiency"],
+    "regionalFocus": ["United Kingdom"],
+    "hqLocation": "Manchester",
+    "investmentThesis": "Supports early climate teams with a clear technical wedge and first customer signals.",
+    "minTicketSize": 25000,
+    "maxTicketSize": 250000,
+    "investmentInstruments": ["SAFE", "Equity"]
+  },
+  {
+    "id": "sample-investor-debt-infrastructure",
+    "organisation": "Sample Infrastructure Debt Partner",
+    "description": "An anonymised debt investor included to keep instrument mismatch visible.",
+    "investorType": ["Debt"],
+    "investmentStage": ["Series A", "Series B"],
+    "sectorFocus": ["Energy", "Infrastructure"],
+    "subSectors": ["Grid", "Storage"],
+    "regionalFocus": ["Europe"],
+    "hqLocation": "Amsterdam",
+    "investmentThesis": "Provides debt for assets with predictable contracted revenue.",
+    "minTicketSize": 1000000,
+    "maxTicketSize": 5000000,
+    "investmentInstruments": ["Debt"]
+  }
+]

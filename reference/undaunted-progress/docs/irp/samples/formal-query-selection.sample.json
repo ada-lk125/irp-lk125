@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "formal-query-selection-v1",
+  "queries": [
+    {
+      "queryId": "query-example-01",
+      "startupId": "recExampleCompany01",
+      "fundingRoundId": "recExampleRound01"
+    },
+    {
+      "queryId": "query-example-02",
+      "startupId": "recExampleCompany02",
+      "fundingRoundId": "recExampleRound02"
+    },
+    {
+      "queryId": "query-example-03",
+      "startupId": "recExampleCompany03",
+      "fundingRoundId": "recExampleRound03"
+    }
+  ]
+}

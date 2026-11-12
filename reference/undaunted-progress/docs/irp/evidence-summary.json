@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "irp-evidence-summary-v3",
+  "asOf": "2026-08-20",
+  "evidenceStatus": "model-assisted-authoritative-snapshot-evaluated",
+  "baseline": {
+    "queryCount": 3,
+    "labelCount": 30,
+    "macro": {
+      "precisionAt5": 1,
+      "precisionAt10": 0.933333,
+      "mrr": 1,
+      "ndcgAt10": 0.829564
+    }
+  },
+  "comparisonPilot": {
+    "candidateCount": 354,
+    "semanticModes": [
+      {
+        "label": "Rule only",
+        "top10OverlapByQuery": [6, 6, 9]
+      },
+      {
+        "label": "Local text similarity",
+        "top10OverlapByQuery": [6, 5, 9]
+      }
+    ]
+  },
+  "finalEvaluation": {
+    "protocol": "paired-model-assisted-case-study",
+    "minimumCaseCount": 4,
+    "maximumCaseCount": 4,
+    "completedCaseCount": 4,
+    "topK": 10,
+    "targetReviewerCount": 1,
+    "completedReviewerCount": 1,
+    "investorSnapshotStatus": "Replit-saved-383-investor-historical-scoring-snapshot-verified; exact-deployment-and-original-input-order-unavailable",
+    "platformModelStatus": "gpt-4o-mini-confirmed",
+    "platformPromptStatus": "confirmed-and-byte-identical-across-four-checked-source-locations",
+    "qualificationProcedureStatus": "two-installed-member-hashes-verified; archive-hash-is-not-the-procedure-identifier",
+    "reportPrivacy": "startup-supplied-case-data; startup-names-must-be-anonymised",
+    "reviewStatus": "383-snapshot-pool-complete-56-of-56; 17-row-return-validated-with-zero-protected-evidence-changes; receiver-side-v3-PASS_FINAL-no-discrepancies; one-Claude-Opus-5-model-assisted-reviewer; optional-human-spot-check-not-completed",
+    "evidenceLevel": "model-assisted-authoritative-snapshot",
+    "pooledLabelCount": 56,
+    "metrics": {
+      "legacy": {
+        "precisionAt5": 0.35,
+        "precisionAt10": 0.3
+      },
+      "normalisationV1": {
+        "precisionAt5": 0.5,
+        "precisionAt10": 0.4
+      },
+      "delta": {
+        "precisionAt5": 0.15,
+        "precisionAt10": 0.1
+      }
+    }
+  },
+  "claim": "Across four frozen real cases on the verified historical 383-investor snapshot, normalisation-v1 increased macro P@5 from 0.350 to 0.500 and macro P@10 from 0.300 to 0.400. Chuan Ju independently ran the frozen private verifier and reported PASS_FINAL with no discrepancies. This is a model-assisted paired case-study result, not human expert review, a byte-exact historical GPT replay or a population-level improvement claim."
+}

@@ -1,0 +1,16 @@
+# Local dependencies and build output
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Local IRP export outputs
+exports/
+outputs/
+*.local.json
+*.local.csv
+
+# Local environment files
+.env
+.env.*
+!.env.example
